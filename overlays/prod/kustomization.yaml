@@ -4,7 +4,10 @@ bases:
 namespace: prod
 
 patches:
-- patch-deployment.yaml
+- path: patch-deployment.yaml
+  target:
+    kind: Deployment
+    name: mywebapp
 
 configMapGenerator:
 - name: mykustom-map
