@@ -3,16 +3,16 @@ resources:
 - service.yaml
 
 labels:
-  app: mykustomapp
+- includeSelectors: true
+  pairs:
+    app: mykustomapp
 
 commonAnnotations:
   app: mykustom-annontations
 
-namePrefix:
-  kustom-
+namePrefix: "kustom-"
 
-nameSuffix:
-  -v1
+nameSuffix: "-v1"
 
 configMapGenerator:
 - name: mykustom-map
